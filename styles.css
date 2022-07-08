@@ -1,18 +1,40 @@
 body {
-    background-color: #FFFFFF;
+    background-color: #cdcdcd;
+
+}
+#metaContainer {
+    display: flex;
+    justify-content: space-between;
 }
 
 #container {
-    display: flex;
-    flex-wrap: wrap;
+    flex: 1;
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(16, 1fr);
+    max-height: 650px; 
+    max-width: 650px;;
     
 }
 
+#control {
+
+    flex 1;
+}
+
 .gridOfDivs {
-    background-color: #000000;;
+    background-color: #ffffff;;
     height: 20px;
-    width: 20px;
-    margin: 5px;
-    flex-shrink: 1;
+    width: 1fr;
+    margin: 3px;
     
+}
+
+.changeColor {
+    background-color: #000000;
+}
+
+h1 {
+width: 50%;
+ margin:auto;   
 }

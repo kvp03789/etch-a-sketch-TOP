@@ -11,10 +11,24 @@
     </head>
     <body>
 
-        <h1>Etch-a-Sketch</h1>
+        <h1>Etch-a-Sketch</h1>  
     <div id="metaContainer">
         <div id="container"></div>
-        <div id="controls"></div>
+        <div id="controls">
+            <div id="slideContainer">
+                <input type="range" min ="16" max="64" value="8" id="slider" step="8" list="tickmarks">
+                <datalist id="tickmarks">
+                    <option value="1" label="16 x 16"></option>
+                    <option value="2" label="24 x 24"></option>
+                    <option value="3" label="32 x 32"></option>
+                    <option value="4" label="40 x 40"></option>
+                    <option value="5" label="48 x 48"></option>
+                    <option value="6" label="56 x 56"></option>
+                    <option value="7" label="64 x 64"></option>
+                </datalist>
+                <p>Grid Size: <span id="value"></span></p>
+            </div>
+        </div>
     </div>
         <script src="scripts.js" async defer></script>
     </body>

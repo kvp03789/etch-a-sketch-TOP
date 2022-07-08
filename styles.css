@@ -4,7 +4,7 @@ body {
 }
 #metaContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 #container {
@@ -18,8 +18,10 @@ body {
 }
 
 #control {
-
-    flex 1;
+    background-color: black;
+    height: 400px;
+    width: 100px;
+    flex: 1;
 }
 
 .gridOfDivs {
@@ -35,6 +37,8 @@ body {
 }
 
 h1 {
+    text-align: center;
 width: 50%;
  margin:auto;   
 }
+

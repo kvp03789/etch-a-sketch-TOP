@@ -2,6 +2,10 @@
 const container = document.querySelector('#container');
 const childDivs = container.childNodes;
 
+let slider = document.getElementById("slider");
+let output = document.getElementById("value");
+let sliderValue = slider.value;
+
 
 //MAKE GIVEN NUMBER OF DIVS IN ROWS AND COLUMNS
 function makeLotsDivs(x, y) {
@@ -18,17 +22,26 @@ function turnWhite(event) {
     event.target.classList.add("changeColor");
     }
 
+    
+//FUNCTION TO UPDATE VALUE WITH RANGE INPUT
+function updateInput() {
+    let slider = document.getElementById("slider");  
+    return slider.value;
+}
 
-let slider = document.getElementById("slider");
-let output = document.getElementById("value");
 
-//output.innerHTML = slider.value;
-//console.log(slider.value);
-//slider.oninput = () => {
-//    output.innerHTML = this.value;
-//}
+slider.oninput = () => {
+    output.innerHTML = this.value;
+    output.innerHTML = slider.value;
+ 
+}
 
-console.log(makeLotsDivs(16, 16));
+slider.addEventListener('mouseup', function() {
+
+    console.log(makeLotsDivs(updateInput(), updateInput()));
+});
+
+console.log(makeLotsDivs(updateInput(), updateInput()));
 
 
 

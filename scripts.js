@@ -30,16 +30,44 @@ function updateInput() {
 }
 
 
+//FUNCTION TO KILL ALL CHILD NODES AND DELETE GRID
+const killChildNodes = (parent) => {
+   while(parent.firstChild) {
+       parent.removeChild(parent.lastChild);} 
+}
+
+//CHANGE RANGE SLIDER TEXT
 slider.oninput = () => {
     output.innerHTML = this.value;
     output.innerHTML = slider.value;
  
 }
 
-slider.addEventListener('mouseup', function() {
 
-    console.log(makeLotsDivs(updateInput(), updateInput()));
+//RANGE SLIDER EVENT
+slider.addEventListener('mouseup', function() {
+    killChildNodes(container);
+    let newSliderValue = slider.value;
+    console.log(makeLotsDivs(newSliderValue, newSliderValue))
+    console.log(changeCSS());
 });
+
+
+//CHANGE CSS FOR GRID
+function changeCSS() {
+    switch (slider.value) {
+        case '16':
+            container.classList.add('.container24');
+            break;
+        case '24':
+            container.classList.add('container32');
+            break; 
+        case '32':
+            container.classList.add('container40');
+            break;    
+
+    }
+}
 
 console.log(makeLotsDivs(updateInput(), updateInput()));
 

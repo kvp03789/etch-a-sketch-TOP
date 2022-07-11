@@ -15,6 +15,7 @@
     <div id="metaContainer">
         <div id="container"></div>
         <div id="controls">
+            <!-- range -->
             <div id="slideContainer">
                 <input type="range" min ="16" max="64" value="8" id="slider" step="8" list="tickmarks">
                 <datalist id="tickmarks">
@@ -28,6 +29,11 @@
                 </datalist>
                 <p>Grid Size: <span id="value"></span></p>
             </div>
+            <!-- switch -->
+            <label class="switch" for="toggle">
+                <input type="checkbox" id="toggle">
+                <span class="slider round"></span>
+            </label>
         </div>
     </div>
         <script src="scripts.js" async defer></script>

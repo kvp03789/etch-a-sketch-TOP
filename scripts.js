@@ -13,7 +13,7 @@ function makeLotsDivs(x, y) {
         var newDivs = document.createElement('div');
         newDivs.className = "gridOfDivs";
         newDivs.addEventListener("mouseover", turnWhite)
-        container.appendChild(newDivs);       
+        container.appendChild(newDivs);      
     }
 }
 
@@ -48,28 +48,20 @@ slider.oninput = () => {
 slider.addEventListener('mouseup', function() {
     killChildNodes(container);
     let newSliderValue = slider.value;
-    console.log(makeLotsDivs(newSliderValue, newSliderValue))
-    console.log(changeCSS());
+    console.log(makeLotsDivs(newSliderValue, newSliderValue));
+    container.style.cssText = `grid-template-columns: repeat(${newSliderValue}, 1fr);`;
+
 });
 
+function changeCSS(sliderValue) {
+    let newestSliderValue = slider.value;
+        document.querySelector("#container").style.cssText = `grid-template-column(, 1fr)`;
 
-//CHANGE CSS FOR GRID
-function changeCSS() {
-    switch (slider.value) {
-        case '16':
-            container.classList.add('.container24');
-            break;
-        case '24':
-            container.classList.add('container32');
-            break; 
-        case '32':
-            container.classList.add('container40');
-            break;    
-
-    }
 }
 
-console.log(makeLotsDivs(updateInput(), updateInput()));
+
+
+//console.log(makeLotsDivs(updateInput(), updateInput()));
 
 
 

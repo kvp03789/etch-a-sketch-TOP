@@ -49,8 +49,7 @@ slider.addEventListener('mouseup', function() {
     killChildNodes(container);
     let newSliderValue = slider.value;
     console.log(makeLotsDivs(newSliderValue, newSliderValue));
-    container.style.cssText = `grid-template-columns: repeat(${newSliderValue}, 1fr);`;
-
+    container.style.cssText = `grid-template-columns: repeat(${newSliderValue}, 1fr);grid-template-rows: repeat(${newSliderValue}, 1fr);`;
 });
 
 function changeCSS(sliderValue) {

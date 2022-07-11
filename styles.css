@@ -8,25 +8,14 @@ body {
 }
 
 #container {
-    flex: 1;
+    flex: 0 0 650px;
     display: grid;
     gap: 1px;
     grid-template-columns: repeat(16, 1fr);
-    max-height: 650px; 
-    max-width: 650px;
+    grid-template-rows: repeat(16, 1fr);
+    height: 650px; 
+    width: 650px;
     
-}
-
-.container24 {
-    grid-template-columns: repeat(24, 1fr);
-}
-
-.container32 {
-    grid-template-columns: repeat(32, 1fr);
-}
-
-.container40 {
-    grid-template-columns: repeat(40, 1fr);
 }
 
 #control {
@@ -38,7 +27,7 @@ body {
 
 .gridOfDivs {
     background-color: #ffffff;;
-    height: 15px;
+    height: 1fr;
     width: 1fr;
     margin: 1px;
     

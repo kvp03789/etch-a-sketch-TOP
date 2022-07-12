@@ -94,4 +94,3 @@ console.log(makeLotsDivs(updateInput(), updateInput()));
 
 
 
-

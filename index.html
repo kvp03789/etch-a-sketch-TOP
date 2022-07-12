@@ -21,6 +21,7 @@
         <div id="controls">
             <!-- range -->
             <div id="slideContainer">
+                
                 <input type="range" min ="16" max="64" value="8" id="slider" step="8" list="tickmarks">
                 <datalist id="tickmarks">
                     <option value="1" label="16 x 16"></option>
@@ -31,15 +32,20 @@
                     <option value="6" label="56 x 56"></option>
                     <option value="7" label="64 x 64"></option>
                 </datalist>
-                <span id="textSlider">Grid Size <span id="value"></span></span>
+                <div id="textSlider">Grid Size <div id="value"></div></div>
             </div>
+                
+            
             <div id="switchContainer">
+                
                 <label class="switch" for="toggle">
                     <input type="checkbox" id="toggle">
                     <span class="slider round"></span>
                 </label>
-                <span id="rgbText">RGB</span>
+                <div id="rgbText">RGB</div>
             </div>
+                
+            
         
         </div>
     </div>

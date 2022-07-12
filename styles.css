@@ -18,9 +18,6 @@ body {
   padding: 40px;
 }
 
-#metaContainer > * {
-    border: 2px solid green;
-}
 
 #titlecontainer {
 flex: 0 1 auto;

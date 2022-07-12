@@ -1,14 +1,29 @@
 body {
-    background-color: #cdcdcd;
-
+    background-color: #fffb92;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
+
 #metaContainer {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 900px;
+    width: 900px;
+    background-color: #e90418;
+    justify-content: space-around;
+    border-radius: 25px;
+    gap: 40px;
+    padding: 40px;
+}
+
+#titlecontainer {
+  flex: 0 0 10%;
 }
 
 #container {
-    flex: 0 0 650px;
+    flex: 2 0 650px;
     display: grid;
     gap: 1px;
     grid-template-columns: repeat(16, 1fr);
@@ -16,20 +31,35 @@ body {
     height: 650px; 
     width: 650px;
     
+    
 }
 
-#control {
-    background-color: black;
-    height: 400px;
-    width: 100px;
-    flex: 1;
+#controls {
+    /* background-color: black; */
+    /* height: 400px;
+    width: 100px; */
+    flex: 1 1 15%;
+    display: flex;    
+    justify-content: space-around;
+    align-content: center;
+    gap: 50px;
+    /* margin-top: 50px; */
+
+}
+
+#controls > * {
+  /* border: 2px solid green; */
+  /* margin: 10px;
+  padding: 10px; */
+ 
 }
 
 .gridOfDivs {
     background-color: #ffffff;;
     height: 1fr;
     width: 1fr;
-    margin: 1px;
+    margin: none;
+    border-radius: 2px;
     
 }
 
@@ -37,21 +67,44 @@ body {
     background-color: #000000;
 }
 
-/* .changeRGB {
-    background-color: --rgbValue: ;
+/* .switchContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
 } */
 
-h1 {
-    text-align: center;
-width: 50%;
- margin:auto;   
+.switchContainer > * {
+  text-align: center;
+  display: flex;
 }
+
+.slideContainer {
+  text-align: center;
+  display: flex;
+}
+
+h1 {
+    /* text-align: center; */
+    /* width: 50%; */
+    font-family: 'Gloria Hallelujah', cursive; 
+    flex: 1;
+    color: white;
+    font-size: 3em;  
+}
+
+p, #textSlider, #rgbText {
+  font-family: 'Gloria Hallelujah', cursive;
+  color: white;
+  font-size: 1.5em;
+}
+
 
 /* SWITCH */
 /* The switch - the box around the slider */
 .switch {
     position: relative;
-    display: inline-block;
+    display: flex;
     width: 60px;
     height: 34px;
   }
